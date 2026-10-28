@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sorryyyy Aishuuuuu 🥺💗</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:linear-gradient(145deg,#fff2f6,#ffdce8,#fff0e9);
+font-family:'Trebuchet MS',sans-serif;color:#77394e;text-align:center;min-height:100vh}
+main{width:min(92%,620px);margin:25px auto;padding:28px 20px;background:#fffdf9;
+border:3px solid white;border-radius:30px;box-shadow:0 15px 50px #bd68852b}
+h1{font-size:clamp(2.3rem,8vw,3.6rem);line-height:1.1;margin:12px 0;color:#e85384}
+h2{color:#df5783;font-size:clamp(1.7rem,6vw,2.4rem)}
+p{line-height:1.7}.small{font-size:.8rem;color:#bd8095;letter-spacing:2px;font-weight:bold}
+.monkey{font-size:100px;display:block;animation:shy 2s infinite}
+.caption{background:#fff0f4;border-radius:18px;padding:12px;margin:20px 0}
+.buttons{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:12px;min-height:65px}
+button{border:0;border-radius:50px;padding:14px 21px;font-size:1rem;font-weight:bold;cursor:pointer;transition:transform .18s}
+button:active{transform:scale(.96)}
+.yes{background:#f26391;color:white;box-shadow:0 5px #d64776}
+.no{background:#fff;border:2px solid #f3c5d5;color:#875365}
+.maybe{background:#ffdb91;color:#704a2d;box-shadow:0 5px #eab96a}
+.back{background:transparent;color:#ba7b91;font-size:.85rem}
+.hidden{display:none!important}
+.note{font-size:.85rem;color:#bd8095;margin-top:20px}
+.letter{background:#fff7ec;border:1px solid #f5dfcc;border-radius:20px;padding:20px;text-align:left;margin:20px 0}
+.letter p{margin:0 0 14px}
+.heart{position:fixed;bottom:-30px;pointer-events:none;animation:float 5s linear forwards;z-index:4}
+.confetti{position:fixed;top:-30px;pointer-events:none;z-index:5;animation:fall 3s linear forwards}
+@keyframes shy{0%,100%{transform:rotate(-5deg) translateY(0)}50%{transform:rotate(5deg) translateY(-7px)}}
+@keyframes float{to{transform:translateY(-110vh) rotate(360deg);opacity:0}}
+@keyframes fall{to{transform:translateY(110vh) rotate(700deg);opacity:0}}
+@media(max-width:420px){main{padding:25px 14px}.monkey{font-size:85px}button{padding:13px 17px;font-size:.92rem}}
+</style>
+</head>
+<body>
+<main>
+<section id="start">
+<p class="small">✿ OFFICIAL APOLOGY DEPARTMENT ✿</p>
+<div class="monkey" aria-label="Sorry monkey">🙉</div>
+<div class="caption">🐒 A monkey has been caught doing silly things.</div>
+<h1>Sorryyyy,<br>Aishuuuuu 🥺💗</h1>
+<h3>Did you forgive me, pretty please?</h3>
+<p>Your Lambuuu is sitting in the corner holding his ears until further notice. 😭</p>
+<div class="buttons">
+<button class="yes" onclick="forgive()">Yes 💗</button>
+<button class="no" onclick="openNo()">No 😤</button>
+<button class="maybe" onclick="openMaybe()">Maybe 🤨</button>
+</div>
+<p class="note">Choose wisely, madam. This monkey has feelings.</p>
+</section>
+
+<section id="maybePage" class="hidden">
+<div class="monkey">🐒🍛</div>
+<p class="small">NEGOTIATIONS ARE OPEN</p>
+<h2 id="maybeTitle">Okayyyy, I'll bribe you a biryani… 🍛</h2>
+<p id="maybeText">Still maybe, Aishuuuuu? 🥺</p>
+<button class="maybe" id="maybeButton" onclick="againMaybe()">Still maybe 🤨</button>
+<p class="note" id="maybeNote">One biryani bribe. A VERY serious offer.</p>
+<br><button class="back" onclick="home()">← Back to the apology</button>
+</section>
+
+<section id="noPage" class="hidden">
+<div class="monkey">🙉💢</div>
+<p class="small">EXCUSE ME, MADAM?!</p>
+<h2 id="noTitle">What do you mean NO?! 😭</h2>
+<p id="noText">I'm literally apologising with my whole monkey heart.</p>
+<div class="buttons">
+<button class="yes" onclick="forgive()">Okay fine, YES 💗</button>
+<button class="no" id="runButton" onclick="runAway()">Still no 😤</button>
+</div>
+<p class="note" id="noNote">The NO button escape protocol is now active.</p>
+<br><button class="back" onclick="home()">← Back to the apology</button>
+</section>
+
+<section id="finalPage" class="hidden">
+<div class="monkey">🐒💗🐒</div>
+<p class="small">OFFICIALLY FORGIVEN? 🥹</p>
+<h2>Aishuuuuu, my favourite human 💗</h2>
+<div class="letter">
+<p>I'm sorryyyy, my Anyyything. I know I mess up sometimes, and I never want you to feel like your feelings don't matter to me.</p>
+<p>You are my favourite person, my happy place, my Biryani Paglu, my sleepy head, my Lambuuu-sized bundle of chaos. 🥹</p>
+<p>I'm not promising to be perfect. I'm promising to keep learning, keep listening, and keep choosing us. Even when we're annoyed or things get hard, I want us to remember we're on the same team.</p>
+<p><b>We'll stick together forevvvverrrrr, okayyy?</b> Through every mood, every laugh, every biryani craving and every sleepy-head day. 💗</p>
+<p><b>I love youuuuuu, Aishuuuuu. Always your Lambuuu. ♡</b></p>
+</div>
+<button class="yes" onclick="hug()">Sending you a giant monkey hug 🫂</button>
+<p id="hugText" class="hidden">HUG DELIVERED! Extra cuddles are on their way. 💗🐒</p>
+<br><br>
+<button class="maybe" onclick="music()">♫ <span id="musicText">Play our tiny sorry song</span></button>
+<p class="note">An original little melody, made just for you.</p>
+<br><button class="back" onclick="home()">Make me apologise again ↺</button>
+</section>
+</main>
+<script>
+let maybeCount=0,noCount=0,audio=null,musicOn=false,musicTimer=null,noteIndex=0;
+
+function show(id){
+  ['start','maybePage','noPage','finalPage'].forEach(x=>
+    document.getElementById(x).classList.add('hidden'));
+  document.getElementById(id).classList.remove('hidden');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function home(){stopMusic();maybeCount=0;noCount=0;show('start');}
+function openMaybe(){
+  maybeCount=0;
+  document.getElementById('maybeTitle').textContent="Okayyyy, I'll bribe you a biryani… 🍛";
+  document.getElementById('maybeText').textContent="Still maybe, Aishuuuuu? 🥺";
+  document.getElementById('maybeButton').textContent="Still maybe 🤨";
+  document.getElementById('maybeButton').disabled=false;
+  document.getElementById('maybeButton').style.opacity='1';
+  document.getElementById('maybeNote').textContent="One biryani bribe. A VERY serious offer.";
+  show('maybePage');
+}
+function againMaybe(){
+  if(maybeCount===0){
+    maybeCount=1;
+    document.getElementById('maybeTitle').textContent="HUHHH. This button is unclickable now. 🔒";
+    document.getElementById('maybeText').textContent="Biryani offer still valid. The Maybe button has retired.";
+    document.getElementById('maybeButton').textContent="Maybe (unavailable) 🔒";
+    document.getElementById('maybeButton').disabled=true;
+    document.getElementById('maybeButton').style.opacity='.5';
+    document.getElementById('maybeNote').textContent="Button status: emotionally unavailable.";
+  }
+}
+function openNo(){
+  noCount=0;
+  document.getElementById('noTitle').textContent="What do you mean NO?! 😭";
+  document.getElementById('noText').textContent="I'm literally apologising with my whole monkey heart.";
+  document.getElementById('runButton').classList.remove('hidden');
+  document.getElementById('runButton').style.transform='';
+  document.getElementById('runButton').textContent='Still no 😤';
+  document.getElementById('noNote').textContent='The NO button escape protocol is now active.';
+  show('noPage');
+}
+function runAway(){
+  noCount++;
+  if(noCount===1){
+    document.getElementById('noTitle').textContent="WAIT WAIT WAIT 😭";
+    document.getElementById('noText').textContent="You really said NO to this squatting monkey??";
+    document.getElementById('noNote').textContent="Escape 1/2. Quick, catch the button! 🏃";
+    document.getElementById('runButton').style.transform=
+      `translate(${Math.random()*180-90}px,${Math.random()*60-30}px) rotate(${Math.random()*16-8}deg)`;
+    document.getElementById('runButton').textContent='Catch me 😤';
+  }else{
+    document.getElementById('runButton').classList.add('hidden');
+    document.getElementById('noTitle').textContent="Hehe… only YES remains now 💗";
+    document.getElementById('noText').textContent="Your Lambuuu is requesting one squishy monkey hug.";
+    document.getElementById('noNote').textContent="The NO button has officially run away. 🏃💨";
+  }
+}
+function forgive(){show('finalPage');confetti(100);}
+function hug(){
+  document.getElementById('hugText').classList.remove('hidden');
+  confetti(40);
+}
+function confetti(n){
+  const symbols=['💗','💕','🌸','✨','🐒','♡','💞'];
+  for(let i=0;i<n;i++){
+    let e=document.createElement('span');
+    e.className='confetti';e.textContent=symbols[Math.floor(Math.random()*symbols.length)];
+    e.style.left=Math.random()*100+'vw';
+    e.style.fontSize=(14+Math.random()*20)+'px';
+    e.style.animationDuration=(2+Math.random()*2)+'s';
+    document.body.appendChild(e);setTimeout(()=>e.remove(),4500);
+  }
+}
+setInterval(()=>{
+  if(document.hidden)return;
+  let e=document.createElement('span');e.className='heart';
+  e.textContent=['♡','♥','✿'][Math.floor(Math.random()*3)];
+  e.style.left=Math.random()*100+'vw';e.style.fontSize=(15+Math.random()*20)+'px';
+  e.style.animationDuration=(6+Math.random()*5)+'s';
+  document.body.appendChild(e);setTimeout(()=>e.remove(),12000);
+},1000);
+
+// Original melody generated in the browser; no music file required.
+function playNote(){
+  if(!musicOn||!audio)return;
+  const notes=[523.25,659.25,783.99,659.25,587.33,698.46,783.99,1046.5];
+  let osc=audio.createOscillator(),gain=audio.createGain();
+  osc.type='sine';osc.frequency.value=notes[noteIndex++%notes.length];
+  gain.gain.setValueAtTime(.0001,audio.currentTime);
+  gain.gain.exponentialRampToValueAtTime(.045,audio.currentTime+.04);
+  gain.gain.exponentialRampToValueAtTime(.0001,audio.currentTime+.4);
+  osc.connect(gain);gain.connect(audio.destination);
+  osc.start();osc.stop(audio.currentTime+.42);
+}
+function stopMusic(){
+  musicOn=false;if(musicTimer)clearInterval(musicTimer);
+  musicTimer=null;
+  if(audio&&audio.state!=='closed')audio.suspend();
+  document.getElementById('musicText').textContent='Play our tiny sorry song';
+}
+async function music(){
+  if(musicOn){stopMusic();return;}
+  const AC=window.AudioContext||window.webkitAudioContext;
+  if(!AC){alert('Music is not supported in this browser.');return;}
+  audio=audio||new AC();await audio.resume();musicOn=true;
+  document.getElementById('musicText').textContent='Pause our tiny sorry song';
+  playNote();musicTimer=setInterval(playNote,470);
+}
+</script>
+</body>
+</html>
